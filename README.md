@@ -29,6 +29,11 @@ MySQL and NODE required for usage.
    - `npm run seed data` if you want to seed sample data to database.
 2. Type `npm run start` to launch backroom-shopper API.
 
+## Preview
+
+[Video Preview](https://youtu.be/CB_ZQFKhxFs)
+![preview](./preview.png)
+
 ## License
 
 [MIT](http://choosealicense.com/licenses/mit/)
