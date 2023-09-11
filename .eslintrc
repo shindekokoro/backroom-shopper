@@ -21,7 +21,10 @@
     "ecmaVersion": "latest"
   },
   "rules": {
-    "prettier/prettier": ["error", { "singleQuote": true }],
+    "prettier/prettier": [
+      "error",
+      { "singleQuote": true, "trailingComma": "none" }
+    ],
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
