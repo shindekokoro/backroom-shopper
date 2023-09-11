@@ -20,7 +20,7 @@ router
           include: associated
         });
       }
-      if (!tags) {
+      if (!tags || !Object.keys(tags).length) {
         return res
           .status(404)
           .json({ message: 'No tag associated with that id.' });

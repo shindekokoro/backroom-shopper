@@ -20,7 +20,7 @@ router
           include: associated
         });
       }
-      if (!products) {
+      if (!products || !Object.keys(products).length) {
         return res
           .status(404)
           .json({ message: 'No product found with that id.' });

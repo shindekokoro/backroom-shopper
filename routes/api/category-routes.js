@@ -20,7 +20,7 @@ router
           include: associated
         });
       }
-      if (!categories) {
+      if (!categories || !Object.keys(categories).length) {
         return res
           .status(404)
           .json({ message: 'No category found with that id.' });
