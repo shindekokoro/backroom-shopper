@@ -38,14 +38,6 @@ router
   })
   // create new product
   .post(async (req, res) => {
-    /* req.body should look like this...
-    {
-      product_name: "Basketball",
-      price: 200.00,
-      stock: 3,
-      tagIds: [1, 2, 3, 4]
-    }
-  */
     try {
       let newProduct = await Product.create(req.body);
       let jsonResponse = newProduct;
@@ -66,10 +58,10 @@ router
   })
   // update product
   .put(async (req, res) => {
-    if (!req.params.id) {
-      return res.status(404).json({ message: 'No product id specified.' });
-    }
     try {
+      if (!req.params.id) {
+        return res.status(404).json({ message: 'No product id specified.' });
+      }
       let updatedProduct = await Product.update(req.body, {
         where: { id: req.params.id }
       });
